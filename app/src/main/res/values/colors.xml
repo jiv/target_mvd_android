@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="splashLeftBubble">#EFC637</color>
+    <color name="splashRightBubble">#42BAF5</color>
+    <color name="splashIntersection">#2C9136</color>
 </resources>

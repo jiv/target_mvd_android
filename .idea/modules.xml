@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/target_mvd.iml" filepath="$PROJECT_DIR$/target_mvd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/target_mvd_android.iml" filepath="$PROJECT_DIR$/target_mvd_android.iml" />
     </modules>
   </component>
 </project>
