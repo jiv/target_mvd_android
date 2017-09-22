@@ -1,0 +1,183 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:target="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.jiv.target_mvd.ui.signup.SignUpFragment"
+    tools:ignore="MissingPrefix">
+
+    <com.jiv.target_mvd.ui.views.BubblesView
+        android:id="@+id/bubblesView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        target:intersectionColor="@color/bubblesViewIntersectionColor"
+        target:leftBubbleCenterX="0.4"
+        target:leftBubbleCenterY="-0.05"
+        target:leftBubbleColor="@color/bubblesViewLeftColor"
+        target:leftBubbleRadius="0.5"
+        target:rightBubbleCenterX="1"
+        target:rightBubbleCenterY="0.07"
+        target:rightBubbleColor="@color/bubblesViewRightColor"
+        target:rightBubbleRadius="0.4" />
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        style="@style/LandingAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/layout_email"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_email"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/layout_password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_name">
+
+        <TextView
+            android:id="@+id/tv_email"
+            style="@style/LandingInputTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/email" />
+
+        <EditText
+            android:id="@+id/et_email"
+            style="@style/LandingInputField"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/landing_edit_text"
+            android:gravity="center_horizontal"
+            android:nextFocusDown="@+id/et_password" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_password"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/layout_sign_in"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_email">
+
+        <TextView
+            android:id="@+id/tv_password"
+            style="@style/LandingInputTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/password" />
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/LandingInputField"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/landing_edit_text"
+            android:gravity="center_horizontal"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/tv_login_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error_message"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_sign_in"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_connect_with_facebook"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_password">
+
+        <Button
+            android:id="@+id/button_sign_in"
+            style="@style/LandingButton"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/sign_in"
+            app:layout_constraintBottom_toTopOf="@+id/tv_forgot_password" />
+
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/landing_forgot_password"
+            android:textColor="@android:color/black"
+            android:textSize="10.5sp"
+            fontPath="@string/open_sans_semibold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_connect_with_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.2"
+        android:text="@string/landing_connect_with_facebook"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_sign_up"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_sign_in"
+        fontPath="@string/open_sans_bold" />
+
+    <LinearLayout
+        android:id="@+id/layout_sign_up"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_connect_with_facebook">
+
+        <View
+            android:id="@+id/view_separator"
+            android:layout_width="150dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tv_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            fontPath="@string/open_sans_semibold" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

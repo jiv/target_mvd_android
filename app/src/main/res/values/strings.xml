@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Target MVD</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="sign_in">sign in</string>
+    <string name="landing_forgot_password">Forgot your password\?</string>
+    <string name="landing_connect_with_facebook">connect with facebook</string>
+    <string name="sign_up">sign up</string>
+
+    <!-- Fonts -->
+    <string name="open_sans_semibold" translatable="false">fonts/OpenSans-Semibold.ttf</string>
+    <string name="open_sans_bold" translatable="false">fonts/OpenSans-Bold.ttf</string>
 </resources>

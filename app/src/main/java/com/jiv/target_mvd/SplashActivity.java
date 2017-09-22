@@ -2,9 +2,10 @@ package com.jiv.target_mvd;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
-public class SplashActivity extends AppCompatActivity {
+import com.jiv.target_mvd.base.BaseActivity;
+
+public class SplashActivity extends BaseActivity {
 
 
     @Override

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BubblesViewAttr">
+        <attr name="leftBubbleCenterX" format="float"/>
+        <attr name="leftBubbleCenterY" format="float"/>
+        <attr name="leftBubbleRadius" format="float"/>
+        <attr name="leftBubbleColor" format="color"/>
+        <attr name="rightBubbleCenterX" format="float"/>
+        <attr name="rightBubbleCenterY" format="float"/>
+        <attr name="rightBubbleRadius" format="float"/>
+        <attr name="rightBubbleColor" format="color"/>
+        <attr name="intersectionColor" format="color"/>
+    </declare-styleable>
+</resources>
