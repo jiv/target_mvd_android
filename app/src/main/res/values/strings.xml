@@ -13,4 +13,7 @@
     <!-- Fonts -->
     <string name="open_sans_semibold" translatable="false">fonts/OpenSans-Semibold.ttf</string>
     <string name="open_sans_bold" translatable="false">fonts/OpenSans-Bold.ttf</string>
+    <string name="username_error">you forgot to put your name!</string>
+    <string name="email_error">oops! This email is not valid</string>
+    <string name="passwords_dont_match_error">passwords don\'t match</string>
 </resources>

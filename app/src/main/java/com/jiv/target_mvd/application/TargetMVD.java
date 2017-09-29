@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 import com.jiv.target_mvd.R;
+import com.jiv.target_mvd.data.ResourcesManager;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
@@ -17,6 +18,7 @@ public class TargetMVD extends Application {
         super.onCreate();
         sContext = getApplicationContext();
         setDefaultFont();
+        ResourcesManager.initialize(this);
     }
 
     public static Context getAppContext() {
