@@ -1,35 +1,27 @@
 package com.jiv.target_mvd.base;
 
-import android.app.ProgressDialog;
 import android.support.v4.app.Fragment;
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment implements Lifecycle.View {
 
-    protected ProgressDialog progressDialog;
+    protected abstract Lifecycle.ViewModel getViewModel();
 
     @Override
     public void onResume() {
 
         super.onResume();
-        subscribeForNetworkRequests();
+        getViewModel().onViewResumed();
     }
 
     @Override
-    public void onPause() {
-
-        super.onPause();
-        unsubscribeFromNetworkRequests();
+    public void onStart() {
+        super.onStart();
+        getViewModel().onViewAttached(this);
     }
 
-    protected void hideProgressDialog() {
-
-        if (progressDialog != null && progressDialog.isShowing()) {
-            progressDialog.dismiss();
-        }
+    @Override
+    public void onStop() {
+        super.onStop();
+        getViewModel().onViewDetached();
     }
-
-    protected abstract void subscribeForNetworkRequests();
-    protected abstract void unsubscribeFromNetworkRequests();
-    protected abstract void reconnectWithNetworkRequests();
-
 }
