@@ -1,4 +1,4 @@
-package com.jiv.target_mvd.services;
+package com.jiv.target_mvd.networking.interceptors;
 
 import com.jiv.target_mvd.application.TargetMVD;
 import com.jiv.target_mvd.data.SharedPreferencesManager;
@@ -7,6 +7,7 @@ import java.io.IOException;
 
 import okhttp3.Interceptor;
 import okhttp3.Response;
+
 
 public class ResponseInterceptor implements Interceptor {
     @Override

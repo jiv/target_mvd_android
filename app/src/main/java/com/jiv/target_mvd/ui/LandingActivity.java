@@ -1,7 +1,8 @@
-package com.jiv.target_mvd;
+package com.jiv.target_mvd.ui;
 
 import android.os.Bundle;
 
+import com.jiv.target_mvd.R;
 import com.jiv.target_mvd.base.BaseActivity;
 import com.jiv.target_mvd.ui.signup.SignUpFragment;
 

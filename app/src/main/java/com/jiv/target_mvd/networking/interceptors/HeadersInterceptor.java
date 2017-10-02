@@ -1,4 +1,4 @@
-package com.jiv.target_mvd.services;
+package com.jiv.target_mvd.networking.interceptors;
 
 import java.io.IOException;
 

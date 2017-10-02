@@ -3,7 +3,7 @@ package com.jiv.target_mvd.networking.signup;
 import com.jiv.target_mvd.data.SharedPreferencesManager;
 import com.jiv.target_mvd.networking.signup.exceptions.SignUpTechFailureException;
 import com.jiv.target_mvd.networking.signup.exceptions.UsernameAlreadyExistsException;
-import com.jiv.target_mvd.services.RestAdapterFactory;
+import com.jiv.target_mvd.networking.RetrofitFactory;
 
 import java.net.HttpRetryException;
 
@@ -21,7 +21,7 @@ public class SignUpApiService {
 
     public SignUpApiService(SharedPreferencesManager sharedPreferencesManager) {
 
-        this.mSignUpApi = RestAdapterFactory.create(ISignUpApi.class);
+        this.mSignUpApi = RetrofitFactory.create(ISignUpApi.class);
         mSharedPreferencesManager = sharedPreferencesManager;
     }
 

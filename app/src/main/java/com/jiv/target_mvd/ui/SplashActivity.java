@@ -1,4 +1,4 @@
-package com.jiv.target_mvd;
+package com.jiv.target_mvd.ui;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,13 +1,16 @@
-package com.jiv.target_mvd.services;
+package com.jiv.target_mvd.networking;
 
 import com.jiv.target_mvd.BuildConfig;
+import com.jiv.target_mvd.networking.interceptors.AccessTokenInterceptor;
+import com.jiv.target_mvd.networking.interceptors.HeadersInterceptor;
+import com.jiv.target_mvd.networking.interceptors.ResponseInterceptor;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RestAdapterFactory {
+public class RetrofitFactory {
     private static final String URL_API = BuildConfig.API_URL;
 
     public static Retrofit build() {
